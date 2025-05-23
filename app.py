@@ -119,7 +119,7 @@ class ClonerWorker(QThread):
             self.log_message.emit("Initializing Selenium WebDriver (Chrome)...", QColor(Qt.GlobalColor.blue))
             chrome_options = ChromeOptions()
             chrome_options.add_argument(f"--user-agent={self.headers.get('User-Agent', DEFAULT_USER_AGENT)}")
-            # chrome_options.add_argument("--headless") 
+            chrome_options.add_argument("--headless") 
             chrome_options.add_argument("--disable-gpu")
             chrome_options.add_argument("--no-sandbox")
             chrome_options.add_argument("--disable-dev-shm-usage")
